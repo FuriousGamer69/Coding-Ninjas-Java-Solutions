@@ -1,25 +1,20 @@
 import java.util.Scanner;
+public class Solution {
 
-public class RowWiseSum {
-	
-	public static void main(String[] args) {
-		
-		Scanner scan=new Scanner(System.in);
-		int row=scan.nextInt();
-		int col=scan.nextInt();
-		int[][] arr=new int[row][col];
-		for(int i=0;i<row;i++) {
-			for(int j=0;j<col;j++) {
-				arr[i][j]=scan.nextInt();
-			}
-		}
-		for(int i=0;i<row;i++) {
-			int sum=0;
-			for(int j=0;j<col;j++) {
-				sum+=arr[i][j];
-			}
-			System.out.print(sum+" ");
-		}
+
+	public static void rowWiseSum(int[][] mat) {
+        int rows=mat.length;
+        if(rows==0){
+            return;
+        }
+        int cols=mat[0].length;
+      for(int i = 0; i < rows; i++){
+        int sum = 0;
+            for(int j = 0; j < cols; j++){
+                sum = sum + mat[i][j];
+            }
+            System.out.print(sum+" ");
+        }
 	}
-
 }
+
